@@ -1,0 +1,117 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* END font */
+
+/* defaults */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Montserrat', sans-serif;
+}
+/* END defaults */
+
+/* main */
+.header-container{
+ top: 0;
+ height: 80px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+ z-index: 999;
+ background-color: white;
+ opacity: 0.5;
+}
+.title{
+ text-transform: uppercase;
+ font-weight: 200;
+}
+.chevron-back-container{
+ margin-top: -20px;
+}
+svg{
+ width: 10px;
+ position: absolute;
+ left: 30px;
+}
+.project-grid{
+ margin-top: 80px;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ list-style: none;
+}
+.project-grid-item{
+ aspect-ratio: 1/0.7;
+ background-color: rgb(242, 242, 242);
+ border: 2px solid rgb(235, 235, 235);
+ position: relative;
+}
+.project-grid-item-overlay{
+ background-color: rgb(235, 235, 235);
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ opacity: 0;
+}
+.project-grid-item-overlay:hover{ 
+ opacity: 1;
+ transition: 250ms ease-in-out;
+}
+.project-grid-item-link{
+ color: black;
+}
+.web-name{
+ font-weight: 400;
+ text-transform: uppercase;
+ text-align: center;
+}
+.web-info{
+ font-weight: 200;
+ text-align: center;
+}
+.project-grid-item-container{
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.project-grid-item-img{
+ width: 70%;
+ height: auto;
+}
+
+@media (max-width: 580px){
+
+ .project-grid {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
+ }
+}
+
+@media (min-width: 581px) and (max-width: 1024px){
+ .project-grid {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+ }
+}
+
+@media (min-width: 1025px){
+ .project-grid {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+ }
+}

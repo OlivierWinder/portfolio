@@ -1,0 +1,133 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* END font */
+
+/* defaults */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Montserrat', sans-serif;
+}
+/* END defaults */
+
+
+/* main */
+.header-container {
+ top: 0;
+ height: 80px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+ z-index: 999;
+ background-color: white;
+}
+
+.title {
+ text-transform: uppercase;
+ font-weight: 200;
+}
+
+.chevron-back-container {
+ margin-top: -20px;
+}
+
+.chevron-back-icon {
+ width: 10px;
+ position: absolute;
+ left: 30px;
+}
+.github-icon-container{
+ margin-top: -20px;
+}
+.github-icon{
+ width: 30px;
+ position: absolute;
+ right: 30px;
+}
+
+
+.project{
+ margin-top: 40px; 
+ height: 150vh;
+ width: 100vw;
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ background-color: rgb(242, 242, 242);
+}
+.detailed-section{
+ background-color: rgb(242, 242, 242);
+ /* background-color: rgb(235, 235, 235); */
+ border-right: 1px solid black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+ height: 90vh;
+ width: 33.3333%;
+ top: 10vh;
+ left: 0;
+}
+.project-video-mob{
+ width: 45%;
+ height: auto;
+}
+.full-section{
+ height: 90vh;
+ background-color: rgb(242, 242, 242);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ position: relative;
+}
+.project-video-desk{
+ width: 80%;
+ height: auto;
+ box-shadow: 2px 2px 50px 5px rgba(0,0,0,0.7)
+}
+.project-description-container{
+ position: absolute;
+ width: 80%;
+ top: 100vh;
+ text-align: center;
+}
+.project-description-info{
+ margin-top: 20px;
+}
+.project-description-title{
+ text-transform: capitalize;
+}
+
+@media (max-width: 580px){
+.project{
+ margin-top: 80px;
+ display: block;
+ position: relative;
+ background-color: green;
+ height: 180vh;
+}
+.detailed-section{
+ width: 100%;
+ border: none;
+ background-color: red;
+ position: absolute;
+ bottom: 0px;
+}
+.full-section{
+ background-color: blue;
+ position: absolute;
+ top: 0;
+}
+.hidden-grid-section{
+ display: none;
+}
+.project-description-container{
+ display: none;
+}
+}
+@media (min-width: 581px){
+.project{}
+}
