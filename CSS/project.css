@@ -50,12 +50,14 @@
 
 
 .project{
- margin-top: 40px; 
- height: 150vh;
+ margin-top: 80px; 
+ height: 180vh;
  width: 100vw;
  display: grid;
  grid-template-columns: 1fr 2fr;
  background-color: rgb(242, 242, 242);
+
+ position: relative;
 }
 .detailed-section{
  background-color: rgb(242, 242, 242);
@@ -67,59 +69,76 @@
  position: fixed;
  height: 90vh;
  width: 33.3333%;
- top: 10vh;
- left: 0;
+ top: 80px;
 }
 .project-video-mob{
  width: 45%;
  height: auto;
 }
 .full-section{
- height: 90vh;
+ height: 190vh;
  background-color: rgb(242, 242, 242);
+ margin-top: -80px;
+}
+.video-container{
+ height: 50%;
+ position: relative;
  display: flex;
  justify-content: center;
  align-items: center;
-
- position: relative;
 }
 .project-video-desk{
  width: 80%;
  height: auto;
- box-shadow: 2px 2px 50px 5px rgba(0,0,0,0.7)
+ box-shadow: 2px 2px 50px 5px rgba(0,0,0,0.7);
+ margin-top: -5vh;
 }
 .project-description-container{
- position: absolute;
- width: 80%;
- top: 100vh;
- text-align: center;
+ width: 100%;
+ height: 50%;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.text-content{
+ margin-top: 5vh;
+ width: 70%;
 }
 .project-description-info{
  margin-top: 20px;
+ text-align: center;
 }
 .project-description-title{
  text-transform: capitalize;
+ text-align: center;
 }
 
 @media (max-width: 580px){
+.header-container{
+}
 .project{
  margin-top: 80px;
- display: block;
+ height: 160vh;
+ width: 100vw;
+ background-color: rgb(242, 242, 242);
+
  position: relative;
- background-color: green;
- height: 180vh;
-}
-.detailed-section{
- width: 100%;
- border: none;
- background-color: red;
- position: absolute;
- bottom: 0px;
 }
 .full-section{
- background-color: blue;
  position: absolute;
  top: 0;
+ height: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.detailed-section{
+ height: 50%;
+ width: 100%;
+ border: none;
+ position: absolute;
+ top: 70vh;
 }
 .hidden-grid-section{
  display: none;
