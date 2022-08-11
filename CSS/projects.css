@@ -22,7 +22,6 @@
  position: fixed;
  z-index: 999;
  background-color: white;
- opacity: 0.5;
 }
 .title{
  text-transform: uppercase;

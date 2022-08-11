@@ -1,0 +1,146 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/* END font */
+
+/* defaults */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Montserrat', sans-serif;
+}
+/* END defaults */
+
+.header-container {
+ top: 0;
+ height: 80px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+ z-index: 999;
+ background-color: white;
+}
+
+.title {
+ text-transform: uppercase;
+ font-weight: 200;
+}
+
+.chevron-back-container {
+ margin-top: -20px;
+}
+
+svg {
+ width: 10px;
+ position: absolute;
+ left: 30px;
+}
+
+/* main */
+main{
+ margin-top: 80px;
+}
+.about-me{
+ height: calc(100vh - 80px);
+ background-color: black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.text-content{
+ width: 70%;
+ height: 60%;
+ color: white;
+}
+.text-content h1{
+ font-size: 18px;
+ text-transform: uppercase;
+ font-weight: 300;
+}
+.text-content p{
+ font-size: 36px;
+ margin-top: 50px;
+ font-family: 'Playfair Display', sans-serif;
+ font-weight: 200;
+}
+
+.language-slider{
+ height: calc(100vh - 80px);
+ background-color: black;
+ position: relative;
+}
+.slider-text-section{
+ height: 25%;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.slider-text-section .text-content{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 55%;
+}
+.slider-text-section h2{
+ font-weight: 400;
+ padding: 0;
+ margin-left: 25px;
+ font-size: 20px;
+}
+.text-overlay{
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.text-overlay h1{
+ font-family: 'Playfair display', sans-serif;
+ font-size: 60px;
+ color: white;
+ z-index: 99;
+ letter-spacing: 4px;
+}
+.slider{
+ height: 50%;
+ /* background-color: blue; */
+ display: flex;
+ align-items: center;
+ overflow: hidden;
+}
+.slide-track{
+ display: flex;
+ list-style: none;
+ width: calc(10 * 350px);
+ animation: scroll 60s linear infinite;
+}
+.slide-track:hover{
+ animation-play-state: paused;
+}
+.slide{
+ width: 350px;
+ height: 350px;
+ /* background-color: purple; */
+ /* border: 1px solid blanchedalmond; */
+ display: flex;
+ align-items: center;
+ padding: 50px;
+}
+.slide-img{
+ width: 100%;
+}
+
+@keyframes scroll {
+ 0% {
+  transform: translateX(0);
+ }
+ 100%{
+  transform: translateX(calc(-350px * 10));
+ }
+};
+
