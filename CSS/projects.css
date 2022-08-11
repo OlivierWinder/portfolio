@@ -72,6 +72,7 @@ svg{
  text-align: center;
 }
 .web-info{
+ margin-top: 5px;
  font-weight: 200;
  text-align: center;
 }
@@ -87,7 +88,7 @@ svg{
  height: auto;
 }
 
-@media (max-width: 580px){
+@media (max-width: 724px){
 
  .project-grid {
   margin-top: 10vh;
@@ -97,11 +98,11 @@ svg{
  }
 }
 
-@media (min-width: 581px) and (max-width: 1024px){
+@media (min-width: 725px) and (max-width: 1024px){
  .project-grid {
   margin-top: 10vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   list-style: none;
  }
 }
@@ -110,7 +111,7 @@ svg{
  .project-grid {
   margin-top: 10vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   list-style: none;
  }
 }

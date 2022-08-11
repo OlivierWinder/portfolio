@@ -9,9 +9,13 @@
  padding: 0;
  box-sizing: border-box;
  font-family: 'Montserrat', sans-serif;
+ scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+ width: 0px;
 }
 /* END defaults */
-
+/* header */
 .header-container {
  top: 0;
  height: 80px;
@@ -33,22 +37,62 @@
  margin-top: -20px;
 }
 
-svg {
+.chevron-back-icon {
  width: 10px;
  position: absolute;
  left: 30px;
 }
 
+.resume-icon-container {
+ margin-top: -30px;
+}
+
+.resume-icon {
+ width: 30px;
+ position: absolute;
+ right: 30px;
+}
+/* end header */
 /* main */
 main{
  margin-top: 80px;
+ height: calc(100vh - 80px);
+ scroll-snap-type: y mandatory;
+ overflow-y: scroll;
 }
+/* section1 */
 .about-me{
  height: calc(100vh - 80px);
  background-color: black;
  display: flex;
  justify-content: center;
  align-items: center;
+ position: relative;
+ overflow: hidden;
+ scroll-snap-align: start;
+}
+.download-resume{
+ position: absolute;
+ color: white;
+ display: flex;
+ align-items: center;
+ top: 20px;
+ right: 37px;
+ gap: 10px;
+ transform: translateX(250px);
+ opacity: 0;
+}
+.download-resume h5{
+ font-weight: 200;
+}
+.download-arrow{
+ height: 8px;
+ width: auto;
+}
+.show-download-resume{
+ transform: translateX(0px);
+ opacity: 1;
+ transition: all 1s ease;
 }
 .text-content{
  width: 70%;
@@ -66,11 +110,12 @@ main{
  font-family: 'Playfair Display', sans-serif;
  font-weight: 200;
 }
-
+/* section2 */
 .language-slider{
  height: calc(100vh - 80px);
  background-color: black;
  position: relative;
+ scroll-snap-align: start;
 }
 .slider-text-section{
  height: 25%;
@@ -80,6 +125,7 @@ main{
  align-items: center;
 }
 .slider-text-section .text-content{
+ margin-top: 100px;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -100,18 +146,18 @@ main{
  align-items: center;
 }
 .text-overlay h1{
+ margin-top: 150px;
  font-family: 'Playfair display', sans-serif;
- font-size: 60px;
+ font-size: 80px;
  color: white;
  z-index: 99;
- letter-spacing: 4px;
+ letter-spacing: 6px;
 }
 .slider{
- height: 50%;
- /* background-color: blue; */
+ height: 75%;
+ overflow: hidden;
  display: flex;
  align-items: center;
- overflow: hidden;
 }
 .slide-track{
  display: flex;
@@ -125,16 +171,17 @@ main{
 .slide{
  width: 350px;
  height: 350px;
- /* background-color: purple; */
- /* border: 1px solid blanchedalmond; */
  display: flex;
  align-items: center;
  padding: 50px;
 }
 .slide-img{
  width: 100%;
+ color: white;
 }
-
+.slide-img.python{
+ width: 350%;
+}
 @keyframes scroll {
  0% {
   transform: translateX(0);
@@ -142,5 +189,33 @@ main{
  100%{
   transform: translateX(calc(-350px * 10));
  }
-};
-
+}
+ 
+/* section3 */
+section.about-me-video{
+ height: calc(100vh - 80px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: black;
+ position: relative;
+ scroll-snap-align: start;
+}
+.aboutme{
+ position: absolute;
+ top: 20px;
+ left: 100px;
+ color: white;
+ font-weight: 200;
+ font-size: 80px;
+ z-index: 999;
+ text-transform: capitalize;
+ font-family: 'Playfair display', sans-serif;
+}
+.youtube-video{
+ width: 80%;
+ height: 80%;
+ background-color: rgb(111, 111, 111);
+ z-index: 1;
+ border: none;
+}
